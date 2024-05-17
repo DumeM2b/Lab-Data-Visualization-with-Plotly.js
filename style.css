@@ -1,0 +1,103 @@
+/* Réinitialisation des marges, des rembourrages et de la police par défaut */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Conteneur pour le titre */
+.contain_title {
+    background-color: black;
+    margin-bottom: 50px;
+}
+
+/* Style du titre */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    color: white;
+}
+
+/* Style pour les titres h3 */
+h3 {
+    padding-left: 30px;
+}
+
+/* Section 1 */
+.section1, .section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* Style des cartes graphiques */
+.graph2, .graph1, .graph3, .graph4 {
+    width: 40%;
+    height: 100%;
+    background: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Style des graphiques */
+.graph2 .barchart, .graph1 .map, .graph3 .linechart, .graph4 .plotdot {
+    width: 100%;
+    height: 100%;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Effet de rotation et d'ombre au survol */
+.graph2:hover, .graph1:hover, .graph3:hover, .graph4:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenu de la carte */
+.card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Affichage du contenu de la carte au survol */
+.graph1:hover .card__content, .graph2:hover .card__content, .graph3:hover .card__content, .graph4:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+/* Style du titre de la carte */
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+}
+
+/* Séparation */
+.seperation {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+
